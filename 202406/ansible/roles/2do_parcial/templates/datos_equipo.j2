@@ -1,0 +1,5 @@
+# Información de mi PC 
+
+Nombre Distribucion: {{ ansible_facts.distribution }}
+IP: {{ ansible_default_ipv4.address }}
+Cantidad de Cores: {{ ansible_facts.processor_vcpus }}

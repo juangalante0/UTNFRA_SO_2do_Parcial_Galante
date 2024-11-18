@@ -1,0 +1,26 @@
+---
+# Crear la estructura de directorios
+- name: Crear directorio para alumno
+  file:
+    path: /tmp/2do_parcial/alumno
+    state: directory
+    mode: '0755'
+
+- name: Crear directorio para equipo
+  file:
+    path: /tmp/2do_parcial/equipo
+    state: directory
+    mode: '0755'
+
+# Generar el archivo datos_alumno.txt
+- name: Generar datos del alumno
+  template:
+    src: datos_alumno.j2
+    dest: /tmp/2do_parcial/alumno/datos_alumno.txt
+
+# Generar el archivo datos_equipo.txt
+- name: Generar datos del equipo
+  template:
+    src: datos_equipo.j2
+    dest: /tmp/2do_parcial/equipo/datos_equipo.txt
+
